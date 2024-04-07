@@ -393,6 +393,58 @@ img {
   transform: translateY(-0.5rem);
 }
 
+/*========== MENU ==========*/
+.menu__container {
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+}
+
+.menu__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--gradient-card);
+  border: 2px solid var(--first-color-light);
+  border-radius: 1rem;
+  box-shadow: 0 2px 4px rgba(3, 74, 40, 0.15);
+  padding: 0.75rem;
+}
+
+.menu__img {
+  width: 100px;
+  align-self: center;
+  margin-bottom: var(--mb-2);
+}
+
+.menu__name {
+  font-weight: var(--font-semi-bold);
+  color: var(--title-color);
+}
+
+.menu__name {
+  font-size: var(--normal-font-size);
+}
+
+.menu__detail {
+  font-size: var(--small-font-size);
+}
+
+.menu__detail {
+  margin-bottom: var(--mb-1);
+}
+
+.menu__button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  padding: 0.625rem 0.813rem;
+  border-radius: 0.5rem 0 0.5rem 0;
+}
+.bd-grid {
+  display: grid;
+  gap: 1.5rem;
+}
 /*=============== CARE ===============*/
 .care__container {
   padding-top: 2rem;
@@ -516,7 +568,12 @@ img {
   text-align: center;
   font-size: var(--small-font-size);
 }
-
+.bd-container {
+  max-width: 960px;
+  width: calc(100% - 2rem);
+  margin-left: var(--mb-2);
+  margin-right: var(--mb-2);
+}
 /*=============== SCROLL BAR ===============*/
 ::-webkit-scrollbar {
   width: 0.6rem;
@@ -572,7 +629,10 @@ img {
     grid-template-columns: 160px;
     justify-content: center;
   }
-
+  .kid_container {
+    grid-template-columns: 160px;
+    justify-content: center;
+  }
   .footer_content {
     grid-template-columns: max-content;
   }
@@ -588,6 +648,10 @@ img {
   }
 
   .shop_container {
+    grid-template-columns: repeat(2, 160px);
+    justify-content: center;
+  }
+  .kid_container {
     grid-template-columns: repeat(2, 160px);
     justify-content: center;
   }
@@ -611,7 +675,23 @@ img {
   .shop_container {
     grid-template-columns: repeat(3, 160px);
   }
+  .kid_container {
+    grid-template-columns: repeat(3, 160px);
+  }
+  .menu__container {
+    margin-top: var(--mb-6);
+  }
 
+  .menu__container {
+    grid-template-columns: repeat(3, 261px);
+    column-gap: 4rem;
+  }
+  .menu__content {
+    padding: 1.5rem;
+  }
+  .menu__img {
+    width: 130px;
+  }
   .footer_container {
     grid-template-columns: repeat(2, max-content);
     justify-content: space-between;
@@ -704,7 +784,6 @@ img {
     padding: 10.5rem 1.5rem 2rem;
     border-radius: 1.5rem;
   }
-
   .shop_img {
     width: 210px;
     top: -5.5rem;
@@ -721,6 +800,37 @@ img {
     right: 1.5rem;
     bottom: 2rem;
     font-size: 1.5rem;
+  }
+  .kid_container {
+    grid-template-columns: repeat(3, 240px);
+    gap: 8.5rem 4rem;
+    padding-top: 7.5rem;
+  }
+
+  .kid_card {
+    padding: 10.5rem 1.5rem 2rem;
+    border-radius: 1.5rem;
+  }
+  .kid_img {
+    width: 210px;
+    top: -5.5rem;
+  }
+
+  .kid_title {
+    font-size: var(--h3-font-size);
+  }
+
+  .kid_price {
+    font-size: var(--h2-font-size);
+  }
+  .kid_button {
+    right: 1.5rem;
+    bottom: 2rem;
+    font-size: 1.5rem;
+  }
+  .bd-container {
+    margin-left: auto;
+    margin-right: auto;
   }
   .care__container {
     grid-template-columns: 480px 385px;
